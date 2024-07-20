@@ -1,9 +1,12 @@
+using LoanApp.Server.Repositories;
 using LoanApp.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<ILoanService, LoanService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -50,6 +50,10 @@ export default defineConfig({
               target: 'https://localhost:7284', // Your ASP.NET server address
               secure: false
             },
+            '^/users': {
+              target: 'https://localhost:7284', 
+              secure: false
+            }
         },
         port: 5173,
         https: {

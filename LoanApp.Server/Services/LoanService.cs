@@ -4,7 +4,6 @@ namespace LoanApp.Server.Services;
 
 public class LoanService : ILoanService
 {
-
     public LoanSuggestionResponse GetLoanSuggestion(LoanSuggestionRequest request)
     {
         if (request.LoanPeriodInMonths < 12)

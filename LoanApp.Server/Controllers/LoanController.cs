@@ -10,7 +10,7 @@ namespace LoanApp.Server.Controllers
         : ControllerBase
     {
         [HttpPost("GetLoanSuggestion")]
-        public LoanSuggestionResponse GetLoanSuggestion(LoanSuggestionRequest request)
+        public LoanSuggestionResponse GetLoanSuggestion([FromBody]LoanSuggestionRequest request)
         {
             return loanService.GetLoanSuggestion(request);
         }
